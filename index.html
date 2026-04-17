@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Walimatussafar Haji - Naufal Aldian</title>
+    
+    <!-- Tailwind CSS untuk Styling Responsif -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Konfigurasi Warna Kustom Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'islamic-green': '#0F4C3A', // Hijau gelap elegan
+                        'islamic-gold': '#D4AF37',  // Emas elegan
+                        'islamic-light': '#F8F9FA'  // Putih keabuan
+                    },
+                    fontFamily: {
+                        'calligraphy': ['"Playfair Display"', 'serif'], // Font judul
+                        'arabic': ['"Amiri"', 'serif'],                 // Font arab
+                        'body': ['"Poppins"', 'sans-serif']             // Font isi
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome untuk Ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS untuk Animasi dan Background -->
+    <style>
+        /* Pattern Background Islami (SVG Data URI) */
+        .bg-arabesque {
+            background-color: #0F4C3A;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4af37' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .bg-light-pattern {
+            background-color: #F8F9FA;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%230f4c3a' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        /* Animasi Fade In */
+        .fade-in {
+            animation: fadeIn 1.5s ease-in-out forwards;
+        }
+        
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1.5s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Animasi Transisi Cover */
+        #cover-page {
+            transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+        }
+
+        .hide-cover {
+            opacity: 0;
+            transform: translateY(-100%);
+            pointer-events: none;
+        }
+
+        /* Pulse Animation untuk Tombol Buka */
+        .animate-pulse-slow {
+            animation: pulse 2s infinite;
+        }
+
+        /* Teks Emas Gradient */
+        .text-gold-gradient {
+            background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        /* Glassmorphism Effect */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Scrollbar tersembunyi untuk estetik */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #0F4C3A; 
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="font-body text-gray-800 antialiased overflow-hidden bg-islamic-light">
+
+    <!-- 1. COVER PAGE (Halaman Pembuka) -->
+    <div id="cover-page" class="fixed inset-0 z-50 bg-arabesque flex flex-col items-center justify-center text-center p-6 text-white min-h-screen w-full">
+        <div class="glass-card p-8 rounded-2xl max-w-md w-full border-t-4 border-t-islamic-gold shadow-2xl relative fade-in-up">
+            
+            <!-- Ornamen Atas -->
+            <div class="text-islamic-gold mb-4 text-5xl">
+                <i class="fa-solid fa-kaaba"></i>
+            </div>
+
+            <p class="text-sm tracking-widest uppercase mb-2 text-islamic-green font-semibold">Undangan</p>
+            <h1 class="font-calligraphy text-3xl sm:text-4xl text-islamic-green font-bold mb-8 leading-tight">
+                Walimatus Safar Haji
+            </h1>
+            
+            <div class="mb-8 border-y border-islamic-gold/30 py-4">
+                <p class="text-sm text-gray-500 mb-2">Kepada Yth:</p>
+                <!-- Nama Tamu akan di-inject oleh JavaScript di sini -->
+                <h2 id="guest-name" class="font-calligraphy text-2xl text-islamic-green font-bold">Tamu Undangan</h2>
+            </div>
+
+            <button onclick="openInvitation()" class="animate-pulse-slow bg-islamic-gold hover:bg-yellow-600 text-white px-8 py-3 rounded-full transition duration-300 font-medium shadow-lg flex items-center justify-center mx-auto space-x-2">
+                <i class="fa-solid fa-envelope-open-text"></i>
+                <span>Buka Undangan</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- 2. MAIN CONTENT (Isi Undangan) -->
+    <div id="main-content" class="h-screen overflow-y-auto hidden bg-light-pattern scroll-smooth">
+        
+        <!-- Hero Section -->
+        <header class="relative bg-arabesque text-white py-20 px-6 text-center shadow-lg border-b-4 border-islamic-gold">
+            <div class="max-w-2xl mx-auto fade-in-up" style="animation-delay: 0.5s;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/27/Basmala.svg" alt="Bismillah" class="h-16 mx-auto mb-6 filter invert brightness-0" style="filter: brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(10deg) brightness(1.2);">
+                <h1 class="font-calligraphy text-4xl md:text-5xl text-gold-gradient font-bold mb-4">Walimatus Safar Haji</h1>
+            </div>
+        </header>
+
+        <!-- Message Section -->
+        <section class="py-16 px-6 text-center max-w-3xl mx-auto">
+            <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12 border-t-4 border-islamic-green" data-aos="fade-up">
+                <h2 class="font-arabic text-2xl text-islamic-green font-bold mb-6">السَّلاَمُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ</h2>
+                <p class="mb-6 leading-relaxed text-gray-700">
+                    Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud mengundang Bapak/Ibu/Saudara/i untuk hadir dalam acara <span class="font-semibold text-islamic-green">Walimatus Safar Haji</span>, sebagai ungkapan syukur serta permohonan doa restu sebelum kami berangkat menunaikan ibadah haji.
+                </p>
+                <p class="mb-6 leading-relaxed text-gray-700">
+                    InsyaAllah acara akan dilaksanakan pada:
+                </p>
+
+                <!-- Event Details List (Vertical) -->
+                <div class="space-y-4 my-10 max-w-lg mx-auto text-left">
+                    <!-- Hari & Tanggal -->
+                    <div class="flex items-center space-x-4 bg-islamic-light p-5 rounded-xl border border-gray-100 shadow-sm transition hover:border-islamic-gold">
+                        <div class="bg-islamic-gold text-white w-12 h-12 flex items-center justify-center rounded-full text-xl flex-shrink-0">
+                            <i class="fa-regular fa-calendar-days"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xs uppercase tracking-widest text-gray-400 font-bold">Hari & Tanggal</h3>
+                            <p class="text-islamic-green font-semibold text-lg">Senin, 20 April 2026</p>
+                        </div>
+                    </div>
+
+                    <!-- Waktu -->
+                    <div class="flex items-center space-x-4 bg-islamic-light p-5 rounded-xl border border-gray-100 shadow-sm transition hover:border-islamic-gold">
+                        <div class="bg-islamic-gold text-white w-12 h-12 flex items-center justify-center rounded-full text-xl flex-shrink-0">
+                            <i class="fa-regular fa-clock"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xs uppercase tracking-widest text-gray-400 font-bold">Waktu</h3>
+                            <p class="text-islamic-green font-semibold text-lg">Pukul 11.00 WITA s/d Selesai</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Lokasi -->
+                    <div class="flex items-center space-x-4 bg-islamic-light p-5 rounded-xl border border-gray-100 shadow-sm transition hover:border-islamic-gold">
+                        <div class="bg-islamic-gold text-white w-12 h-12 flex items-center justify-center rounded-full text-xl flex-shrink-0">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xs uppercase tracking-widest text-gray-400 font-bold">Lokasi Acara</h3>
+                            <p class="text-islamic-green font-semibold">Jalan Amir Hamzah No 13<br>Karang Bedil - Mataram</p>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="mb-6 leading-relaxed text-gray-700">
+                    Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir serta memberikan doa restu.
+                </p>
+                <p class="mb-6 leading-relaxed text-gray-700">
+                    Mohon maaf lahir dan batin atas segala khilaf dan kesalahan. Semoga Allah SWT memberikan kemudahan dan perlindungan dalam perjalanan ibadah kami. Aamiin Ya Rabbal ‘Alamin.
+                </p>
+
+                <h2 class="font-arabic text-2xl text-islamic-green font-bold mt-8 mb-4">وَالسَّلاَمُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ</h2>
+                
+                <div class="mt-8 pt-6 border-t border-gray-200">
+                    <p class="text-sm text-gray-500 mb-2">Hormat kami,</p>
+                    <p class="font-calligraphy text-2xl font-bold text-islamic-green">Naufal Aldian</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Peta Lokasi Section -->
+        <section class="py-12 px-6 bg-islamic-green text-white text-center">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-islamic-gold text-3xl mb-4"><i class="fa-solid fa-map-marked-alt"></i></div>
+                <h2 class="font-calligraphy text-3xl font-bold mb-8 text-gold-gradient">Peta Lokasi</h2>
+                
+                <div class="rounded-xl overflow-hidden border-4 border-islamic-gold shadow-2xl bg-white p-2">
+                    <!-- Google Maps Embed yang telah diperbarui lokasinya -->
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3945.068214223297!2d116.113645!3d-8.5894179!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dcdbf5950d2688f%3A0x7c7f897f742f36f3!2sJl.%20Amir%20Hamzah%20No.13%2C%20Karang%20Bedil%2C%20Kec.%20Mataram%2C%20Kota%20Mataram%2C%20Nusa%20Tenggara%20Bar.%2083121!5e0!3m2!1sid!2sid!4v1715000000000!5m2!1sid!2sid" 
+                        width="100%" 
+                        height="450" 
+                        style="border:0; border-radius: 0.5rem;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                
+                <div class="mt-8">
+                    <a href="https://maps.app.goo.gl/QQymueuEoAYxmtkJ9" target="_blank" class="inline-block bg-islamic-gold hover:bg-yellow-600 text-white px-8 py-4 rounded-full transition duration-300 font-medium shadow-lg hover:scale-105 transform">
+                        <i class="fa-solid fa-directions mr-2"></i> Petunjuk Arah
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Doa Section -->
+        <section class="py-16 px-6 text-center max-w-2xl mx-auto">
+            <div class="text-islamic-gold text-4xl mb-6 opacity-50"><i class="fa-solid fa-quote-right"></i></div>
+            <h2 class="font-arabic text-3xl text-islamic-green font-bold mb-6 leading-loose">
+                بِسْمِ اللَّهِ مَجْرَاهَا وَمُرْسَاهَا ۚ إِنَّ رَبِّي لَغَفُورٌ رَحِيمٌ
+            </h2>
+            <p class="text-gray-600 italic">
+                "Dengan menyebut nama Allah di waktu berlayar dan berlabuhnya. Sesungguhnya Tuhanku benar-benar Maha Pengampun lagi Maha Penyayang."
+            </p>
+            <p class="text-sm text-gray-400 mt-2">(QS. Hud: 41)</p>
+        </section>
+
+        <!-- Guestbook / Doa Section -->
+        <section class="py-16 px-6 bg-islamic-light border-t-4 border-islamic-green">
+            <div class="max-w-3xl mx-auto">
+                <div class="text-center mb-10">
+                    <h2 class="font-calligraphy text-3xl text-islamic-green font-bold mb-4">Kirim Doa & Ucapan</h2>
+                    <p class="text-gray-600">Berikan doa restu Anda untuk kelancaran ibadah haji kami.</p>
+                </div>
+
+                <div class="bg-white p-6 md:p-8 rounded-2xl shadow-lg border border-gray-100 mb-8">
+                    <form id="doa-form" class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Nama Anda</label>
+                            <input type="text" id="sender-name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-islamic-gold focus:border-transparent outline-none transition" placeholder="Tulis nama Anda">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Doa & Ucapan</label>
+                            <textarea id="sender-message" required rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-islamic-gold focus:border-transparent outline-none transition" placeholder="Tulis doa dan ucapan..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-islamic-green hover:bg-green-800 text-white font-medium py-3 rounded-lg transition shadow-md">
+                            <i class="fa-regular fa-paper-plane mr-2"></i> Kirim Ucapan
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Daftar Ucapan -->
+                <div id="wishes-list" class="space-y-4 max-h-80 overflow-y-auto pr-2" style="scrollbar-width: thin;">
+                    <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                        <h4 class="font-semibold text-islamic-green text-lg">Keluarga Besar Bpk. Ahmad</h4>
+                        <p class="text-gray-600 mt-1 text-sm">Semoga menjadi haji yang mabrur, diberikan kelancaran dan kesehatan selama menjalankan ibadah di tanah suci. Aamiin Ya Rabbal 'Alamin.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-islamic-green py-10 text-center text-islamic-light/70 border-t-4 border-islamic-gold">
+            <p class="font-calligraphy text-xl text-islamic-gold mb-2">Walimatus Safar Haji</p>
+            <p class="text-sm">© 2026 Naufal Aldian. Mataram, Nusa Tenggara Barat.</p>
+        </footer>
+
+    </div>
+
+    <!-- 3. FLOATING MUSIC BUTTON -->
+    <button id="music-btn" onclick="toggleAudio()" class="fixed bottom-6 right-6 bg-islamic-gold text-white p-4 rounded-full shadow-2xl z-50 transition transform hover:scale-110 hidden">
+        <i id="music-icon" class="fa-solid fa-music"></i>
+    </button>
+
+    <audio id="bg-music" loop>
+        <source src="https://cdn.pixabay.com/download/audio/2022/05/16/audio_f5ce25eb6e.mp3?filename=ramadan-islamic-110502.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- 4. JAVASCRIPT LOGIC -->
+    <script>
+        // --- 1. Logika Parameter URL untuk Nama Tamu ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            let guestName = urlParams.get('to');
+            if (guestName) {
+                guestName = guestName.replace(/\+/g, ' '); 
+            } else {
+                guestName = 'Tamu Undangan';
+            }
+            document.getElementById('guest-name').innerText = guestName;
+        });
+
+        // --- 2. Logika Animasi Membuka Undangan & Autoplay ---
+        const audio = document.getElementById('bg-music');
+        const musicBtn = document.getElementById('music-btn');
+        let isPlaying = false;
+
+        function openInvitation() {
+            const coverPage = document.getElementById('cover-page');
+            const mainContent = document.getElementById('main-content');
+
+            coverPage.classList.add('hide-cover');
+            document.body.classList.remove('overflow-hidden');
+
+            setTimeout(() => {
+                coverPage.style.display = 'none';
+                mainContent.classList.remove('hidden');
+                musicBtn.classList.remove('hidden');
+                
+                // Trigger Autoplay saat tombol diklik
+                playAudio();
+            }, 800);
+        }
+
+        // --- 3. Logika Kontrol Musik ---
+        function playAudio() {
+            audio.play().then(() => {
+                isPlaying = true;
+                updateMusicIcon();
+            }).catch((error) => {
+                console.log("Autoplay dicegah oleh browser.", error);
+            });
+        }
+
+        function toggleAudio() {
+            if (isPlaying) {
+                audio.pause();
+                isPlaying = false;
+            } else {
+                audio.play();
+                isPlaying = true;
+            }
+            updateMusicIcon();
+        }
+
+        function updateMusicIcon() {
+            const icon = document.getElementById('music-icon');
+            if (isPlaying) {
+                icon.className = "fa-solid fa-compact-disc fa-spin";
+            } else {
+                icon.className = "fa-solid fa-music";
+            }
+        }
+
+        // --- 4. Logika Form Ucapan ---
+        document.getElementById('doa-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('sender-name').value;
+            const message = document.getElementById('sender-message').value;
+            
+            if(name && message) {
+                const wishList = document.getElementById('wishes-list');
+                const newWish = document.createElement('div');
+                newWish.className = 'bg-white p-4 rounded-xl shadow-sm border border-gray-100 fade-in';
+                newWish.innerHTML = `
+                    <h4 class="font-semibold text-islamic-green text-lg">${name}</h4>
+                    <p class="text-gray-600 mt-1 text-sm">${message}</p>
+                `;
+                wishList.insertBefore(newWish, wishList.firstChild);
+                this.reset();
+            }
+        });
+    </script>
+</body>
+</html>
